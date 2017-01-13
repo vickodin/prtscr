@@ -39,11 +39,17 @@ Having previous line, you can use html img tag:
 ### Available options
 
 **url**: URL Address
+
 **width**: Browser width, px
+
 **height**: Browser height, px
+
 **scale**: Screenshot scale for width, px
+
 **key**: Your Key
+
 **secret**: Your Secret
+
 **format**: Screenshot extension
 
 **key** and **secret** options you can obtain at [PrtScr.ru](https://prtscr.ru/)
