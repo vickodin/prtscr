@@ -23,18 +23,30 @@ Or install it yourself as:
 run the next line of code:
 
 ```ruby
-Prtscr.get(url: 'https://google.com',width: 1280, height: 1024, scale: 250, key: 'YOUR_KEY_HERE', secret: 'YOUR_SECRET_HERE')
+Prtscr.get(url: 'https://google.com', width: 1280, height: 1024, scale: 250, key: 'YOUR_KEY_HERE', secret: 'YOUR_SECRET_HERE', format: 'jpg')
 ```
 
 And get something like:
 
 ```
-https://prtscr.ru/v1/1280x1024/250/jpg/1484087718/AIQACodQ/25dcf97122650b5c5282e5e7ab3539a1/https%3A%2F%2Fgoogle.com
+https://prtscr.ru/v2/1280x1024/250/1484317141/AIQACodQ/be8d94e167d4e0e9c6d8e106582f0894/aHR0cHM6Ly9nb29nbGUuY29t.jpg
 ```
 
 Having previous line, you can use html img tag:
 
-![Google website screenshot](https://prtscr.ru/v1/1280x1024/250/jpg/1484087718/AIQACodQ/25dcf97122650b5c5282e5e7ab3539a1/https%3A%2F%2Fgoogle.com)
+![Google website screenshot](https://prtscr.ru/v2/1280x1024/250/1484317141/AIQACodQ/be8d94e167d4e0e9c6d8e106582f0894/aHR0cHM6Ly9nb29nbGUuY29t.jpg)
+
+### Available options
+
+**url**: URL Address
+**width**: Browser width, px
+**height**: Browser height, px
+**scale**: Screenshot scale for width, px
+**key**: Your Key
+**secret**: Your Secret
+**format**: Screenshot extension
+
+**key** and **secret** options you can obtain at [PrtScr.ru](https://prtscr.ru/)
 
 ## Development
 
