@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["vick.orel@gmail.com"]
 
   spec.summary       = "PrtScr.ru API gem"
-  spec.description   = "Website screenshot API gem"
+  spec.description   = "Website screenshot API gem for http://prtscr.ru"
   spec.homepage      = "https://github.com/vickodin/prtscr"
   spec.license       = "MIT"
 
