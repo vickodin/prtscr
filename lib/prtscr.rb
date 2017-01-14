@@ -1,8 +1,8 @@
-require "prtscr/version"
-require "base64"
+require 'prtscr/version'
+require 'base64'
 
+# Main Module
 module Prtscr
-
   def self.get(data)
     d = {
       version: 'v2',
@@ -28,5 +28,4 @@ module Prtscr
       return [[d[:scheme], d[:host], d[:version], d[:size], d[:scale], d[:timestamp], d[:key], d[:sign], d[:url]].join('/'), d[:format]].join('.')
     end
   end
-
 end
