@@ -4,6 +4,7 @@ require 'base64'
 # Main Module
 module Prtscr
   def self.get(data)
+    # TODO: Move default values to initializer
     d = {
       version: 'v2',
       width: '1280',
@@ -24,7 +25,6 @@ module Prtscr
       d[:url] = Base64.urlsafe_encode64(d[:url])
       d[:sign] = Digest::MD5.hexdigest([d[:width], d[:height], d[:scale], d[:timestamp], d[:key], d[:url], d[:format], d[:secret]].join(''))
       d[:size] = [d[:width], d[:height]].join('x')
-
       return [[d[:scheme], d[:host], d[:version], d[:size], d[:scale], d[:timestamp], d[:key], d[:sign], d[:url]].join('/'), d[:format]].join('.')
     end
   end
