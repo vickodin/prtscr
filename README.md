@@ -1,8 +1,6 @@
-# Prtscr
+# Prtscr.ru API gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/prtscr`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a lib for [PrtScr.ru](https://prtscr.ru/) API (website screenshot).
 
 ## Installation
 
@@ -14,7 +12,7 @@ gem 'prtscr'
 
 And then execute:
 
-    $ bundle install
+    $ bundle
 
 Or install it yourself as:
 
@@ -22,23 +20,49 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+run the next line of code:
+
+```ruby
+Prtscr.get(url: 'https://duckduckgo.com', width: 1280, height: 1024, scale: 350, key: 'YOUR_KEY_HERE', secret: 'YOUR_SECRET_HERE', format: 'jpg')
+```
+
+And get something like:
+
+```
+https://prtscr.ru/v3/screenshot.jpg?url=https%3A%2F%2Fduckduckgo.com%2F&key=2gi_io4l&sign=f162b32357ece5f1489352cbb40c9b4d&width=1280&height=1024&scale=350
+```
+
+Having previous line, you can use html img tag:
+
+![Google website screenshot](https://prtscr.ru/v3/screenshot.jpg?url=https%3A%2F%2Fduckduckgo.com%2F&key=2gi_io4l&sign=f162b32357ece5f1489352cbb40c9b4d&width=1280&height=1024&scale=350)
+
+### Available options
+
+**url**: URL encoded Address
+
+**width**: Browser width, px
+
+**height**: Browser height, px
+
+**scale**: Screenshot scale for width, px
+
+**key**: Your Key
+
+**secret**: Your Secret
+
+**format**: Screenshot extension
+
+**key** and **secret** options you can obtain at [PrtScr.ru](https://prtscr.ru/)
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/prtscr. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/prtscr/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/vickodin/prtscr.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Prtscr project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/prtscr/blob/master/CODE_OF_CONDUCT.md).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
