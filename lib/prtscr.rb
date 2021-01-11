@@ -7,8 +7,8 @@ require 'base64'
 require 'prtscr/v1'
 require 'prtscr/v2'
 require 'prtscr/v3'
-# Main module
 
+# Main module
 module Prtscr
   extend Prtscr::V1
   extend Prtscr::V2
