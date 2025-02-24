@@ -22,7 +22,6 @@ module Prtscr
           full:   data[:full],
           delay:  data[:delay],
           key:    data[:key],
-          delay:  data[:delay],
           sign:   v4_sign(data),
         }.compact
       )
