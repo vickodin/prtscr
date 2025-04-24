@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Prtscr
-  # Version 2:
+  # Version 3:
   module V3
     def v3(data)
       "https://prtscr.ru/v3/screenshot.#{data[:format]}?#{v3_query(data)}"

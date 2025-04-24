@@ -72,4 +72,26 @@ RSpec.describe Prtscr do
       expect(result).to eq(standard)
     end
   end
+
+  context 'when v4' do
+    let :v4 do
+      {
+        version: 'v4',
+        url: 'https://google.com/',
+        width: 1280,
+        height: 1024,
+        scale: 250,
+        key: 'YOUR_KEY_HERE',
+        secret: 'YOUR_SECRET_HERE',
+        format: 'png'
+      }
+    end
+
+    it 'has correct sign' do
+      result   = described_class.get(v4)
+      standard = 'https://prtscr.ru/v4/screenshot.png?url=https%3A%2F%2Fgoogle.com%2F&width=1280&height=1024&scale=250&key=YOUR_KEY_HERE&sign=d1ec9ffc5423820b5712ff681a682542'
+
+      expect(result).to eq(standard)
+    end
+  end
 end
